@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pen Pal Pastries - Order Form</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Pen Pal Pastries</h1>
+    <p>Order your favorite cookies online!</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
+
+<main>
+<h2>Place Your Order</h2>
+<form id="order-form" action="#" method="POST">
+    <!-- Customer Info -->
+    <fieldset>
+        <legend>Customer Information</legend>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" autocomplete="name" placeholder="Jane Doe" required minlength="2" 
+               aria-required="true">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="jane@example.com" required aria-required="true">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+123-456-78-90" 
+               pattern="^\+?\d{1,3}[- ]?\d{1,4}[- ]?\d{3,4}[- ]?\d{3,4}$">
+        <label for="order-id">Order ID:</label>
+        <input type="text" id="order-id" name="order-id" value="123456" readonly>
+    </fieldset>
+
+    <!-- Order Details -->
+    <fieldset>
+        <legend>Order Details</legend>
+        <label for="flavor-select">Select Cookie Flavor:</label>
+        <select id="flavor-select" name="flavor" required>
+            <option value="">Choose a flavor</option>
+            <option value="chocolate-chip">Chocolate Chip</option>
+            <option value="peanut-butter">Peanut Butter</option>
+            <option value="oatmeal-raisin">Oatmeal Raisin</option>
+            <option value="double-chocolate">Double Chocolate</option>
+            <option value="custom">Custom Mix</option>
+        </select>
+        <input type="text" id="custom-flavor" name="custom-flavor" class="custom-flavor" placeholder="Describe your mix">
+        <label for="quantity">Quantity (Dozens):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="20" step="1" required placeholder="1">
+    </fieldset>
+
+    <!-- Preferences -->
+    <fieldset>
+        <legend>Preferences</legend>
+        <label><input type="checkbox" name="newsletter" value="yes"> Subscribe to newsletter</label>
+        <label><input type="radio" name="delivery" value="pickup" required> Pickup</label>
+        <label><input type="radio" name="delivery" value="delivery"> Home Delivery</label>
+    </fieldset>
+
+    <!-- Special Instructions -->
+    <fieldset>
+        <legend>Special Instructions</legend>
+        <label for="instructions">Comments:</label>
+        <textarea id="instructions" name="instructions" rows="4" maxlength="300" placeholder="E.g., Allergies, custom notes..."></textarea>
+    </fieldset>
+
+    <button type="submit">Place Order</button>
+</form>
+<div id="form-message" style="display:none; text-align:center; color:green; margin-top:1rem;">
+    Thank you! Your order has been submitted.
+</div>
+</main>
+
+<footer>
+<p>&copy; 2025 Pen Pal Pastries. All rights reserved.</p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

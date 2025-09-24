@@ -1,0 +1,102 @@
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fffaf0;
+    color: #333;
+}
+header, footer {
+    background-color: #ffb347;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+h1, h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+form, .content {
+    background-color: #fff8f0;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+fieldset {
+    border: 1px solid #ffb347;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+input, select, textarea, button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+input[type="checkbox"], input[type="radio"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+button {
+    background-color: #ffb347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0.75rem;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #ffa500;
+}
+.custom-flavor {
+    display: none;
+}
+nav {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+@media (min-width: 768px) {
+    fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    label, input, select, textarea {
+        flex: 1 1 45%;
+    }
+    input[type="checkbox"], input[type="radio"] {
+        flex: none;
+    }
+}
