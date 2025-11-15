@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Order — Cookies Corner</title>
+    <meta
+      name="description"
+      content="Order personalized cookies from Cookies Corner."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html">Cookies Corner</a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a><a href="about.html">About</a
+          ><a href="order.html">Order</a><a href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-expanded="false">☰</button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <h1>Order — Build Your Cookie</h1>
+      <p>Design a cookie, add a message, and we'll take care of the rest.</p>
+
+      <form id="order-form" novalidate data-api="/.netlify/functions/sendOrder">
+        <fieldset>
+          <legend>Contact Information</legend>
+          <label for="name">Full Name *</label
+          ><input
+            id="name"
+            name="name"
+            type="text"
+            minlength="2"
+            required
+            placeholder="Jane Doe"
+          />
+          <label for="email">Email *</label
+          ><input
+            id="email"
+            name="email"
+            type="email"
+            required
+            placeholder="jane@example.com"
+          />
+          <label for="phone">Phone</label
+          ><input
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder="+251912345678"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Design Your Cookie</legend>
+          <label for="flavor">Flavor *</label>
+          <select id="flavor" name="flavor" class="select_cookie_flavor" required>
+            <option value="">Choose a flavor</option>
+            <option value="chocolate-chip">Chocolate Chip</option>
+            <option value="oatmeal-raisin">Oatmeal Raisin</option>
+            <option value="peanut-butter">Peanut Butter</option>
+            <option value="double-chocolate">Double Chocolate</option>
+            <option value="build-your-own">Build Your Own</option>
+          </select>
+
+          <div class="container">
+            <h1>Cookie Ingredients & Toppings</h1>
+
+            <ul class="ingredient-options">
+              <!-- Item 1: Dark Chocolate -->
+              <li>
+                <label class="item-row">
+                  <input type="checkbox" name="ing" value="dark-chocolate" />
+                  Dark chocolate chips
+                </label>
+              </li>
+
+              <!-- Item 2: Milk Chocolate -->
+              <li>
+                <label class="item-row">
+                  <input type="checkbox" name="ing" value="milk-chocolate" />
+                  Milk chocolate chips
+                </label>
+              </li>
+
+              <!-- Item 3: Peanuts -->
+              <li>
+                <label class="item-row">
+                  <input type="checkbox" name="ing" value="peanuts" />
+                  Chopped peanuts
+                </label>
+              </li>
+
+              <!-- Item 4: Oats -->
+              <li>
+                <label class="item-row">
+                  <input type="checkbox" name="ing" value="oats" />
+                  Rolled oats
+                </label>
+              </li>
+
+              <!-- Item 5: Raisins -->
+              <li>
+                <label class="item-row">
+                  <input type="checkbox" name="ing" value="raisins" />
+                  Raisins
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <label for="message_on_cookie">Message to write on cookie</label>
+          <input
+            id="message_on_cookie"
+            name="message_on_cookie"
+            maxlength="80"
+            placeholder="Write a short message (e.g., 'Congrats!')"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Order Details</legend>
+          <label for="quantity">Quantity (dozens) *</label
+          ><input
+            id="quantity"
+            name="quantity"
+            type="number"
+            min="1"
+            max="50"
+            value="1"
+            required
+          />
+    <div class="form-group">
+            <p class="flavor-label">Delivery Option *</p> 
+            <ul class="ingredient-options">
+                <li>
+                    <label class="item-row">
+                        <input type="radio" name="delivery" value="pickup" required>
+                        Pickup
+                    </label>
+                </li>
+                <li>
+                    <label class="item-row">
+                        <input type="radio" name="delivery" value="delivery">
+                        Delivery
+                    </label>
+                </li>
+            </ul>
+        </div>
+        </fieldset>
+
+        <label for="notes">Special notes (allergies, packaging requests)</label>
+        <textarea id="notes" name="notes" rows="3" maxlength="300"></textarea>
+        <p></p>
+        <button type="submit" class="btn">Submit Order</button>
+        <div
+          id="form-message"
+          role="status"
+          aria-live="polite"
+          class="small"
+        ></div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="wrap"><p>&copy; 2025 Cookies Corner.</p></div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

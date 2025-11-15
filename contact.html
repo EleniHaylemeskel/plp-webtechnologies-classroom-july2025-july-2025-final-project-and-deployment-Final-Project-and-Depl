@@ -1,0 +1,34 @@
+
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Cookies Corner</title>
+  <meta name="description" content="Contact Cookies Corner for wholesale and partnerships.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html">Cookies Corner</a>
+  <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="order.html">Order</a><a href="contact.html">Contact</a></nav>
+  <button class="nav-toggle" aria-expanded="false">☰</button></div></header>
+
+  <main class="wrap">
+    <h1>Contact Cookies Corner</h1>
+    <p>Questions, wholesale inquiries, and partnerships — we'd love to hear from you. Follow us on Instagram @cookiescorner.</p>
+
+    <section><h2>Contact Info</h2><address>Email: <a href="mailto:orders@cookiescorner.example">orders@cookiescorner.example</a><br>Phone: +251-9-46-62-32-75</address></section>
+
+    <section aria-labelledby="contact-form"><h2 id="contact-form">Send us a message</h2>
+      <form id="contact-us-form" novalidate data-api="/.netlify/functions/sendOrder">
+        <label for="cname">Full Name</label><input id="cname" name="name" required>
+        <label for="cemail">Email</label><input id="cemail" name="email" type="email" required>
+        <label for="cmessage">Message</label><textarea id="cmessage" name="message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+        <div id="contact-msg" role="status" aria-live="polite" class="small"></div>
+      </form>
+    </section>
+  </main>
+
+<footer><div class="wrap"><p>&copy; 2025 Cookies Corner.</p></div></footer>
+<script src="js/script.js"></script>
+</body>
+</html>
